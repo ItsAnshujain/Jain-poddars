@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import Router from './routers/router';
+import CustomRouter from './routers/CustomRouter';
 function App() {
 
   return (
     <>
       <Routes>
-        <Route path='/*' element={<Router />} />
+        <Route path='/*' element={<CustomRouter />} />
       </Routes>
     </>
   )

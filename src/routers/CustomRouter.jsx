@@ -4,7 +4,7 @@ import AboutPage from '../pages/AboutPage'
 import TeamPage from '../pages/TeamPage'
 import ContactPage from '../pages/ContactPage'
 
-const Router = () => {
+const CustomRouter = () => {
   return (
     <div>
       <Routes>
@@ -19,4 +19,4 @@ const Router = () => {
   )
 }
 
-export default Router
+export default CustomRouter
