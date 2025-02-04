@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
+import { motion } from "framer-motion";
 const teamMembers = [
   {
     name: "CA. Akhil Poddar",
@@ -29,8 +29,20 @@ const TeamPage = () => {
   return (
     <>
       <Navbar />
-      <div className="bg-[#EEF7FF] py-16 px-6 md:px-12 lg:px-20 text-center">
-        <h2 className="text-4xl font-bold text-[#4D869C] mb-6">TEAM LEADERS OF JPC</h2>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="bg-[#EEF7FF] py-16 px-6 md:px-12 lg:px-20 text-center"
+      >
+        <motion.h2
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl font-bold text-[#4D869C] mb-6"
+        >
+          TEAM LEADERS OF JPC
+        </motion.h2>
         <div className="space-y-10">
           {teamMembers.map((member, index) => (
             <div key={index} className={`flex flex-col md:flex-row items-center bg-white p-6  shadow-lg ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
@@ -43,7 +55,7 @@ const TeamPage = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );
