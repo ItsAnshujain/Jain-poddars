@@ -83,52 +83,58 @@ const AboutPage = () => {
             </div>
           </div>
           <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        whileHover={{ scale: 1.05 }}
+        className="m-2 shadow-lg rounded-lg overflow-hidden"
+      >
+        <img
+          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,fit=crop/Y4L809DEXbT2ajlj/office-group-2-d95Kzbb1rpFzvvRM.jpg"
+          alt="About Us"
+          className="w-full h-auto shadow-md"
+        />
+      </motion.div>
+
+      {/* Grid Images with Hover Animation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
+        {[
+          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/ap-YBgrQPP7yNikOGgO.jpg",
+          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/team-AVLNnKak6lTj91po.jpg",
+          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/9-mP4NDKyZaqf0jBW3.jpg",
+          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/10-A1arj6OrQzUeVwBp.jpg",
+        ].map((src, index) => (
+          <motion.img
+            key={index}
+            src={src}
+            alt="About Us"
+            className="w-full h-auto md:h-[350px] shadow-md object-cover"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
             whileHover={{ scale: 1.05 }}
-            className="m-2 shadow-lg rounded-lg overflow-hidden"
-          >
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,fit=crop/Y4L809DEXbT2ajlj/office-group-2-d95Kzbb1rpFzvvRM.jpg"
-              alt="About Us"
-              className="w-full h-auto shadow-md"
-            />
-          </motion.div>
-          {/* </motion.div> */}
+          />
+        ))}
+      </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/ap-YBgrQPP7yNikOGgO.jpg"
-              alt="About Us"
-              className="w-full h-auto md:h-[350px] shadow-md object-cover"
-            />
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/team-AVLNnKak6lTj91po.jpg"
-              alt="About Us"
-              className="w-full h-auto md:h-[350px] shadow-md object-cover"
-            />
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/9-mP4NDKyZaqf0jBW3.jpg"
-              alt="About Us"
-              className="w-full h-auto md:h-[350px] shadow-md object-cover"
-            />
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/10-A1arj6OrQzUeVwBp.jpg"
-              alt="About Us"
-              className="w-full h-auto md:h-[350px] shadow-md object-cover"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/4-mePGeV4kKlSKNGL3.jpg"
-              alt="About Us"
-              className="w-full h-auto shadow-md object-cover"
-            />
-            <img
-              src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/6-mp87kVZGV8F1nVpx.jpg"
-              alt="About Us"
-              className="w-full h-auto shadow-md object-cover"
-            />
-          </div>
+      {/* Two Large Images with Hover Animation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {[
+          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/4-mePGeV4kKlSKNGL3.jpg",
+          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/6-mp87kVZGV8F1nVpx.jpg",
+        ].map((src, index) => (
+          <motion.img
+            key={index}
+            src={src}
+            alt="About Us"
+            className="w-full h-auto shadow-md object-cover"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            whileHover={{ scale: 1.05 }}
+          />
+        ))}
+      </div>
         </motion.div>
 
         {/* Second Section */}

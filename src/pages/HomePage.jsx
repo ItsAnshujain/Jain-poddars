@@ -20,13 +20,25 @@ const services = [
   "Due Diligence",
   "Legal & Secretarial Services",
   "Accounting Solutions",
+   "Risk Advisory Services"
 ];
 
 const fadeIn = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.8, ease: "easeInOut" } 
+  },
 };
-
+const smoothFadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+};
 const HomePage = () => {
   return (
     <>
@@ -52,37 +64,38 @@ const HomePage = () => {
         </motion.div>
       </div>
 
-      {/* Our Services Section */}
-      <section className="text-center bg-[#EEF7FF] py-10">
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          className="text-4xl font-bold text-[#4D869C] mb-6"
+      <section className="text-center bg-[#EEF7FF] py-12">
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={smoothFadeIn}
+  >
+    <h2 className="text-4xl font-bold text-[#4D869C] mb-8">
+      Our Services
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 md:px-12 lg:px-20">
+      {services.map((service, index) => (
+        <motion.div
+          key={index}
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.3, ease: "easeOut" },
+          }}
+          className="shadow-md p-6 text-[#3B6790] font-semibold text-lg bg-white rounded-lg transition-all duration-300"
         >
-          Our Services
-        </motion.h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 md:px-12 lg:px-20">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="shadow-lg p-6 text-[#3B6790] font-semibold text-lg transition bg-white rounded-lg"
-            >
-              <Link to={`/services/${encodeURIComponent(service)}`}>
-              {service}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
+          <Link
+            to={`/services/${encodeURIComponent(service)}`}
+            className="block hover:text-[#2C5B77] transition-colors duration-300"
+          >
+            {service}
+          </Link>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+</section>
       {/* About Us Section */}
       <section className="py-10 px-6 md:px-12 lg:px-20 bg-[#EEF7FF] items-center">
         <motion.h2

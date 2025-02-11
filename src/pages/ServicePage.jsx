@@ -33,6 +33,8 @@ const serviceDetails = {
   "Legal & Secretarial Services": `We provide legal and secretarial services to ensure corporate compliance, including company incorporation, regulatory filings, board meeting documentation, and corporate restructuring. Our services help businesses meet statutory requirements seamlessly.`,
 
   "Accounting Solutions": `Our accounting solutions cover bookkeeping, financial statement preparation, payroll processing, and tax accounting. We help businesses maintain accurate financial records and comply with accounting standards while optimizing their financial performance.`,
+"Risk Advisory Services": `Our Risk Advisory services help businesses identify, assess, and mitigate financial, operational, and compliance risks. We provide tailored risk management strategies, internal control assessments, and regulatory compliance support to enhance business resilience and ensure long-term success.`,
+
 };
 
 const ServicePage = () => {
