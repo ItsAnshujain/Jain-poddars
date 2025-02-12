@@ -58,7 +58,7 @@ const HomePage = () => {
           variants={fadeIn}
           className="text-center text-white max-w-2xl"
         >
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-4xl md:text-5xl font-bold "   style={{ textShadow: "2px 2px 4px black" }}>
             Your Trusted Partner in Tax Consultancy, Business Decisions & Financial Planning
           </h1>
         </motion.div>
