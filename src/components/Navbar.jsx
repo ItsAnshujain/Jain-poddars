@@ -11,9 +11,21 @@ const Navbar = () => {
       ? "font-semibold text-[#4D869C]"
       : "relative transition-all duration-500 before:absolute before:-bottom-1 before:left-0 before:h-0.5 before:w-0 before:bg-[#4D869C] before:transition-all before:duration-500 hover:before:w-full hover:text-[#4D869C]";
 
-  const capitalizeFirstLetter = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+  const getNavLabel = (path) => {
+    switch (path) {
+      case "/services":
+        return "Our Services";
+      case "/about":
+        return "About Us";
+      case "/contact":
+        return "Contact Us";
+      case "/team":
+        return "Team JPC";
+      default:
+        return path.replace("/", "") || "Home";
+    }
   };
+
 
   return (
     <header className="bg-white shadow-lg p-4 px-10 sticky top-0 z-50">
@@ -29,20 +41,28 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-6 text-gray-800 text-base font-medium">
           {["/", "/about", "/services", "/team", "/contact"].map((path) => (
             <a key={path} href={path} className={getActiveClass(path)}>
-              {capitalizeFirstLetter(path.replace("/", "") || "Home")}
+              {getNavLabel(path)}
             </a>
           ))}
         </nav>
 
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} className="text-[#4D869C]" /> : <Menu size={28} className="text-[#4D869C]" />}
+          {isOpen ? (
+            <X size={28} className="text-[#4D869C]" />
+          ) : (
+            <Menu size={28} className="text-[#4D869C]" />
+          )}
         </button>
       </div>
 
       {isOpen && (
         <div className="md:hidden bg-white border-t shadow-inner p-4 space-y-2">
           {["/", "/about", "/services", "/team", "/contact"].map((path) => (
-            <a key={path} href={path} className={`block py-2 ${getActiveClass(path)}`}>
+            <a
+              key={path}
+              href={path}
+              className={`block py-2 ${getActiveClass(path)}`}
+            >
               {capitalizeFirstLetter(path.replace("/", "") || "Home")}
             </a>
           ))}

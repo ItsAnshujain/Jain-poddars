@@ -65,7 +65,7 @@ const Footer = () => {
                   href="/services"
                   className="text-sm text-white hover:text-gray-200 transition"
                 >
-                  Services
+                  Our Services
                 </a>
               </li>
               <li>
