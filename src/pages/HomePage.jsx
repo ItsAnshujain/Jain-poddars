@@ -90,7 +90,7 @@ const HomePage = () => {
                 className="shadow-md p-6 text-[#3B6790] font-semibold text-lg bg-white rounded-lg transition-all duration-300"
               >
                 <Link
-                  to={`/services/${encodeURIComponent(service)}`}
+                  to={`/services`}
                   className="block hover:text-[#2C5B77] transition-colors duration-300"
                 >
                   {service}
