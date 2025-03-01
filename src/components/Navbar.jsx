@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-3">
           <img
-            className="h-12"
+            className="h-8 md:h-12"
             src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=700,fit=crop,q=95/Y4L809DEXbT2ajlj/ca-india-logo-AQEVZ4jJNKi3bgn6.jpg"
             alt="Logo"
           />
@@ -56,14 +56,11 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-t shadow-inner p-4 space-y-2">
-          {["/", "/about", "/services", "/team", "/contact"].map((path) => (
-            <a
-              key={path}
-              href={path}
-              className={`block py-2 ${getActiveClass(path)}`}
-            >
-              {capitalizeFirstLetter(path.replace("/", "") || "Home")}
+        <div className="md:hidden  p-4 space-y-2">
+        
+           {["/", "/about", "/services", "/team", "/contact"].map((path) => (
+            <a key={path} href={path}  className={`block py-2 ${getActiveClass(path)}`}>
+              {getNavLabel(path)}
             </a>
           ))}
         </div>

@@ -101,9 +101,7 @@ const ServicePage = () => {
       <Navbar />
       <div className="min-h-screen flex flex-col justify-center items-center bg-[#EEF7FF] px-6 md:px-12 lg:px-20 py-10">
         <div className="p-6 text-center">
-          <h1 className="text-3xl font-bold text-[#4D869C] mb-8">
-            Our Services
-          </h1>
+          <h1 className="text-3xl font-bold text-[#4D869C] mb-8">Our Services</h1>
 
           {/* Services list with icons in rows */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -113,10 +111,10 @@ const ServicePage = () => {
                 className="border-[#4D869C] border border-b-4 text-[#4D869C] p-6 cursor-pointer rounded-lg shadow-xl transition transform hover:scale-105"
                 onClick={() => openModal(serviceName)}
               >
-                <div className="flex items-center justify-center mb-4 font-bold">
+                <div className="flex items-center justify-center mb-4 font-bold text-3xl">
                   {serviceDetails[serviceName].icon}
                 </div>
-                <h3 className="text-lg">{serviceName}</h3>
+                <h3 className="text-lg font-semibold">{serviceName}</h3>
               </div>
             ))}
           </div>
@@ -126,7 +124,7 @@ const ServicePage = () => {
       {/* Modal with transparent background */}
       {selectedService && (
         <motion.div
-          className="fixed inset-0 modal-overlay flex justify-center items-center z-50"
+          className="fixed inset-0 flex justify-center items-center modal-overlay"
           onClick={closeModal}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -134,7 +132,7 @@ const ServicePage = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="bg-[#EEF7FF] border-[#4D869C] border-t-4 p-8 w-1/2 shadow-lg relative z-60"
+            className="bg-[#EEF7FF] border-[#4D869C] border-t-4 p-8 w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/2 shadow-lg relative"
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -158,7 +156,6 @@ const ServicePage = () => {
           </motion.div>
         </motion.div>
       )}
-
       <Footer />
     </>
   );

@@ -33,28 +33,34 @@ const TeamPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="bg-[#EEF7FF] py-16 px-6 md:px-12 lg:px-20 text-center"
+      className="bg-[#EEF7FF] py-16 px-4 sm:px-6 md:px-12 lg:px-20 text-center"
     >
       <motion.h2
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="text-5xl font-bold text-[#4D869C] mb-10"
+        className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#4D869C] mb-10"
       >
         TEAM LEADERS OF JPC
       </motion.h2>
+      
       <div className="space-y-10">
         {teamMembers.map((member, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className={`flex flex-col md:flex-row items-center bg-white p-8 rounded-2xl shadow-lg transition-transform ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+            className={`flex flex-col md:flex-row items-center bg-white p-6 sm:p-8 rounded-2xl shadow-lg transition-transform 
+              ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
           >
-            <img src={member.image} alt={member.name} className="w-full md:w-1/3 h-auto mb-4 md:mb-0 rounded-lg" />
+            <img 
+              src={member.image} 
+              alt={member.name} 
+              className="w-full sm:w-3/4 md:w-1/3 h-auto mb-4 md:mb-0 rounded-lg"
+            />
             <div className="md:w-2/3 md:px-6 text-left">
-              <h3 className="text-2xl font-bold text-[#3B6790] mb-2">{member.name}</h3>
-              <p className="text-gray-700 text-base text-justify whitespace-pre-line">{member.description}</p>
+              <h3 className="text-xl sm:text-2xl font-bold text-[#3B6790] mb-2">{member.name}</h3>
+              <p className="text-gray-700 text-sm sm:text-base text-justify whitespace-pre-line">{member.description}</p>
             </div>
           </motion.div>
         ))}
