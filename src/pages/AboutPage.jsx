@@ -11,6 +11,10 @@ import about2 from "../images/about2.jpg";
 import about3 from "../images/about3.jpg"; 
 import about4 from "../images/about4.jpg"; 
 import about6 from "../images/about6.jpg"; 
+import about7 from "../images/about7.jpg"; 
+import about8 from "../images/about8.jpg"; 
+import about9 from "../images/about9.jpg"; 
+import about10 from "../images/about10.jpg"; 
 const teamImages = [
   akhil,
   uttam,
@@ -112,6 +116,24 @@ const AboutPage = () => {
           about2,
           about4,
          about6].map((src, index) => (
+          <motion.img
+            key={index}
+            src={src}
+            alt="About Us"
+            className="w-full h-auto md:h-[350px] shadow-md object-cover"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.2 }}
+            whileHover={{ scale: 1.05 }}
+          />
+        ))}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
+        {[
+          about7,
+          about8,
+          about9,
+         about10].map((src, index) => (
           <motion.img
             key={index}
             src={src}
