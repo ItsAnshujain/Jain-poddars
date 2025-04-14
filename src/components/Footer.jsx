@@ -1,5 +1,6 @@
 import React from "react";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
+import scanner from "../images/scanner.jpg";
 const Footer = () => {
   return (
     <>
@@ -97,7 +98,7 @@ const Footer = () => {
             </a>
             <div className="flex flex-col items-center mt-4">
               <img
-                src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=260,h=238,fit=crop/Y4L809DEXbT2ajlj/412658712_806532011194524_595915117869892154_n-mk3ypq66z7ijoz6G.jpg"
+                src={scanner}
                 alt="QR Code"
                 className="w-24 h-24"
               />

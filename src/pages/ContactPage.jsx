@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import location from "../images/location.png"; // Importing the map image
+import location from "../images/location.png"; 
 
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
@@ -58,12 +58,13 @@ const ContactPage = () => {
           {/* Contact Form */}
           <motion.div variants={slideInLeft} className="p-6 flex flex-col justify-center">
             <h3 className="text-2xl font-semibold text-[#4D869C] mb-4 text-center">Get In Touch</h3>
-            <form className="flex flex-col gap-4">
+            <form  action="https://formsubmit.co/anshujain8844@gmail.com" 
+  method="POST"  className="flex flex-col gap-4">
               <input type="text" placeholder="Name" className="p-2 border border-gray-300 rounded-md focus:outline-none" required />
               <input type="email" placeholder="Email" className="p-2 border border-gray-300 rounded-md focus:outline-none" required />
               <input type="tel" placeholder="Mobile Number" className="p-2 border border-gray-300 rounded-md focus:outline-none" required />
               <textarea placeholder="Message" rows="4" className="p-2 border border-gray-300 rounded-md focus:outline-none" required></textarea>
-              <button
+              <button type="submit"
                 className="bg-[#4D869C] text-white py-2 rounded-md hover:bg-[#3B6790] transition"
               >
                 Submit

@@ -2,12 +2,21 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import akhil from "../images/akhil.jpeg"; 
+import anish from "../images/anish.jpg"; 
+import uttam from "../images/uttam.jpg"; 
+import rahul from "../images/rahul.jpg"; 
+import about1 from "../images/about1.jpg"; 
+import about2 from "../images/about2.jpg"; 
+import about3 from "../images/about3.jpg"; 
+import about4 from "../images/about4.jpg"; 
+import about6 from "../images/about6.jpg"; 
 const teamImages = [
-  "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=720,h=614,fit=crop,trim=20.863731656184488;0;36.511530398322854;0/Y4L809DEXbT2ajlj/whatsapp_image_2023-12-24_at_10.52.42_db634165-removebg-preview-mv0l3VjrlKuZM4EG.png",
-  "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=720,h=674,fit=crop,trim=30.36798336798337;0;78.73180873180874;0/Y4L809DEXbT2ajlj/uj-removebg-preview-mePGNXVaqLSE7exw.png",
-  "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=720,h=712,fit=crop,trim=0;0;143.5;0/Y4L809DEXbT2ajlj/rahul_saraf-removebg-preview-AoPNkQOaMyf7oqrq.png",
-  "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=720,h=744,fit=crop,trim=0;0;49.78915662650603;0/Y4L809DEXbT2ajlj/whatsapp_image_2023-12-24_at_11.47.25_c761a463-removebg-preview-m7Vky0BRwNh5r8Zv.png",
-];
+  akhil,
+  uttam,
+  rahul,
+  anish
+  ];
 
 const AboutPage = () => {
   return (
@@ -90,7 +99,7 @@ const AboutPage = () => {
         className="m-2 shadow-lg rounded-lg overflow-hidden"
       >
         <img
-          src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=945,fit=crop/Y4L809DEXbT2ajlj/office-group-2-d95Kzbb1rpFzvvRM.jpg"
+          src={about3}
           alt="About Us"
           className="w-full h-auto shadow-md"
         />
@@ -99,11 +108,10 @@ const AboutPage = () => {
       {/* Grid Images with Hover Animation */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
         {[
-          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/ap-YBgrQPP7yNikOGgO.jpg",
-          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/team-AVLNnKak6lTj91po.jpg",
-          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/9-mP4NDKyZaqf0jBW3.jpg",
-          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/10-A1arj6OrQzUeVwBp.jpg",
-        ].map((src, index) => (
+          about1,
+          about2,
+          about4,
+         about6].map((src, index) => (
           <motion.img
             key={index}
             src={src}
@@ -117,24 +125,7 @@ const AboutPage = () => {
         ))}
       </div>
 
-      {/* Two Large Images with Hover Animation */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {[
-          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/4-mePGeV4kKlSKNGL3.jpg",
-          "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=356,fit=crop/Y4L809DEXbT2ajlj/6-mp87kVZGV8F1nVpx.jpg",
-        ].map((src, index) => (
-          <motion.img
-            key={index}
-            src={src}
-            alt="About Us"
-            className="w-full h-auto shadow-md object-cover"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-            whileHover={{ scale: 1.05 }}
-          />
-        ))}
-      </div>
+     
         </motion.div>
 
         {/* Second Section */}

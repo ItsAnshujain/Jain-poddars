@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation } from "react-router-dom";
-
+import logo1 from "../images/logo1.png"; 
+import logo2 from "../images/logo2.jpg"; 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -30,10 +31,15 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-lg p-4 px-10 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center">
           <img
-            className="h-8 md:h-12"
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=700,fit=crop,q=95/Y4L809DEXbT2ajlj/ca-india-logo-AQEVZ4jJNKi3bgn6.jpg"
+            className="h-6 md:h-10"
+            src={logo1}
+            alt="Logo"
+          />
+          <img
+            className="h-8 md:h-14"
+            src={logo2}
             alt="Logo"
           />
         </div>
