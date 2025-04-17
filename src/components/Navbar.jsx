@@ -34,12 +34,12 @@ const Navbar = () => {
         <a href="/">
         <div className="flex items-center">
           <img
-            className="h-8 md:h-10"
+            className="h-10 md:h-10"
             src={logo1}
             alt="Logo"
           />
           <img
-            className="h-10 md:h-14"
+            className="h-12 md:h-14"
             src={logo2}
             alt="Logo"
           />
