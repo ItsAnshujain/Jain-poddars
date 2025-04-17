@@ -2,25 +2,20 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
-import akhil from "../images/akhil.jpeg"; 
-import anish from "../images/anish.jpg"; 
-import uttam from "../images/uttam.jpg"; 
-import rahul from "../images/rahul.jpg"; 
-import about1 from "../images/about1.jpg"; 
-import about2 from "../images/about2.jpg"; 
-import about3 from "../images/about3.jpg"; 
-import about4 from "../images/about4.jpg"; 
-import about6 from "../images/about6.jpg"; 
-import about7 from "../images/about7.jpg"; 
-import about8 from "../images/about8.jpg"; 
-import about9 from "../images/about9.jpg"; 
-import about10 from "../images/about10.jpg"; 
-const teamImages = [
-  akhil,
-  uttam,
-  rahul,
-  anish
-  ];
+import akhil from "../images/akhil.jpeg";
+import anish from "../images/anish.jpg";
+import uttam from "../images/uttam.jpg";
+import rahul from "../images/rahul.jpg";
+import about1 from "../images/about1.jpg";
+import about2 from "../images/about2.jpg";
+import about3 from "../images/about3.jpg";
+import about4 from "../images/about4.jpg";
+import about6 from "../images/about6.jpg";
+import about7 from "../images/about7.jpg";
+import about8 from "../images/about8.jpg";
+import about9 from "../images/about9.jpg";
+import about10 from "../images/about10.jpg";
+const teamImages = [akhil, uttam, rahul, anish];
 
 const AboutPage = () => {
   return (
@@ -96,58 +91,48 @@ const AboutPage = () => {
             </div>
           </div>
           <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-        whileHover={{ scale: 1.05 }}
-        className="m-2 shadow-lg rounded-lg overflow-hidden"
-      >
-        <img
-          src={about3}
-          alt="About Us"
-          className="w-full h-auto shadow-md"
-        />
-      </motion.div>
-
-      {/* Grid Images with Hover Animation */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
-        {[
-          about1,
-          about2,
-          about4,
-         about6].map((src, index) => (
-          <motion.img
-            key={index}
-            src={src}
-            alt="About Us"
-            className="w-full h-auto md:h-[350px] shadow-md object-cover"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
             whileHover={{ scale: 1.05 }}
-          />
-        ))}
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
-        {[
-          about7,
-          about8,
-          about9,
-         about10].map((src, index) => (
-          <motion.img
-            key={index}
-            src={src}
-            alt="About Us"
-            className="w-full h-auto md:h-[350px] shadow-md object-cover"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2 }}
-            whileHover={{ scale: 1.05 }}
-          />
-        ))}
-      </div>
+            className="m-2 shadow-lg rounded-lg overflow-hidden"
+          >
+            <img
+              src={about3}
+              alt="About Us"
+              className="w-full h-auto shadow-md"
+            />
+          </motion.div>
 
-     
+          {/* Grid Images with Hover Animation */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
+            {[about1, about2, about4, about6].map((src, index) => (
+              <motion.img
+                key={index}
+                src={src}
+                alt="About Us"
+                className="w-full h-auto md:h-[350px] shadow-md object-cover"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                whileHover={{ scale: 1.05 }}
+              />
+            ))}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-2">
+            {[about7, about8, about9, about10].map((src, index) => (
+              <motion.img
+                key={index}
+                src={src}
+                alt="About Us"
+                className="w-full h-auto md:h-[350px] shadow-md object-cover"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                whileHover={{ scale: 1.05 }}
+              />
+            ))}
+          </div>
         </motion.div>
 
         {/* Second Section */}

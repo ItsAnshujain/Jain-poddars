@@ -31,18 +31,20 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-lg p-4 px-10 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
+        <a href="/">
         <div className="flex items-center">
           <img
-            className="h-6 md:h-10"
+            className="h-8 md:h-10"
             src={logo1}
             alt="Logo"
           />
           <img
-            className="h-8 md:h-14"
+            className="h-10 md:h-14"
             src={logo2}
             alt="Logo"
           />
         </div>
+        </a>
 
         <nav className="hidden md:flex space-x-6 text-gray-800 text-base font-medium">
           {["/", "/about", "/services", "/team", "/contact"].map((path) => (

@@ -97,11 +97,13 @@ const Footer = () => {
               Follow us : <FacebookRoundedIcon />
             </a>
             <div className="flex flex-col items-center mt-4">
+              <a href="https://m.facebook.com/groups/knowledge.jpc/">
               <img
                 src={scanner}
                 alt="QR Code"
-                className="w-24 h-24"
+                className="w-24 h-24 cursor-pointer"
               />
+              </a>
               <p className="mt-2">Scan for Knowledge Updates</p>
             </div>
           </div>
